@@ -1,0 +1,20 @@
+{
+  "name": "@sayanriju/microservice-skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:dev": "pm2 update && pm2 start ./etc/apps.json && pm2 start npm --no-automation --name 'API Gateway' -- run start-proxy",
+    "start:prod": "pm2 update && pm2 start ./etc/apps.json --env production && pm2 start npm --env production --no-automation --name 'API Gateway' -- run start-proxy",
+    "start-proxy": "micro-proxy -r ./etc/rules.json -p 9000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sayan \"Riju\" Chakrabarti <s26c.sayan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "if-env": "^1.0.4",
+    "micro-proxy": "^1.1.0",
+    "pm2": "^3.2.2"
+  }
+}

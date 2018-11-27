@@ -1,0 +1,6 @@
+{
+  "rules": [
+    {"pathname": "/service1", "method":["GET", "POST", "OPTIONS"], "dest": "http://localhost:4001"},
+    {"pathname": "/service2", "dest": "http://localhost:4002"}
+  ]
+}

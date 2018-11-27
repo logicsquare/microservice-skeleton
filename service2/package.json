@@ -1,0 +1,22 @@
+{
+  "name": "@sayanriju/service1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "micro -p ${PORT}",
+    "start:dev": "micro-dev -p ${PORT}",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sayan \"Riju\" Chakrabarti <s26c.sayan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "micro": "^9.3.3",
+    "nrp": "^0.1.1"
+  },
+  "devDependencies": {
+    "if-env": "^1.0.4",
+    "micro-dev": "^3.0.0"
+  }
+}

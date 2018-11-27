@@ -1,0 +1,34 @@
+{
+  "apps" : [
+    {
+      "name"        : "Service # 1",
+      "cwd"         : "./service1",
+      "script"      : "npm",
+      "args"        : "start",
+      "watch"       : true,
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 4001
+      },
+      "env_production" : {
+        "NODE_ENV": "production",
+        "PORT": 4001
+      }
+    },
+    {
+      "name"        : "Service # 2",
+      "cwd"         : "./service2",
+      "script"      : "npm",
+      "args"        : "start",
+      "watch"       : true,
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 4002
+      },
+      "env_production" : {
+        "NODE_ENV": "production",
+        "PORT": 4002
+      }
+    }
+  ]
+}
